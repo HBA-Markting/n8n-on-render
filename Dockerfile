@@ -1,17 +1,13 @@
-FROM node:20
+FROM node:20.19.0
 
-# Create app directory
 WORKDIR /usr/src/app
 
-# Install n8n
-COPY package.json ./
-RUN npm install --production
+COPY package*.json ./
 
-# Copy source
+RUN npm install
+
 COPY . .
 
-# Expose port
 EXPOSE 5678
 
-# Start n8n
-CMD ["npm", "start"]
+CMD ["n8n", "start"]
