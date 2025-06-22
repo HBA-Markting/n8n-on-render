@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: n8n-agent
+    env: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: superagent123
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: N8N_PORT
+        value: "5678"
+    repo: https://github.com/HBA-Markting/n8n-on-render
+    branch: main
