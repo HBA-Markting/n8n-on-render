@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: n8n-on-render
+    env: docker
+    plan: free
+    repo: https://github.com/HBA-Markting/n8n-on-render
+    dockerfilePath: ""
+    autoDeploy: true
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "admin"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "admin123"
+      - key: N8N_HOST
+        value: "n8n-on-render-4q9r.onrender.com"
+      - key: N8N_PORT
+        value: "5678"
+      - key: WEBHOOK_URL
+        value: "https://n8n-on-render-4q9r.onrender.com/"
