@@ -12,4 +12,4 @@ ENV WEBHOOK_URL=https://n8n-on-render-xxxx.onrender.com/
 
 EXPOSE 5678
 
-CMD ["n8n"]
+ENTRYPOINT ["./entrypoint.sh"]
