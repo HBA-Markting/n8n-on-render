@@ -4,7 +4,7 @@ services:
     env: docker
     plan: free
     repo: https://github.com/HBA-Markting/n8n-on-render
-    dockerfilePath: ""
+    dockerfilePath: ./Dockerfile  # <- WICHTIG
     autoDeploy: true
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
